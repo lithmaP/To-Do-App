@@ -52,7 +52,9 @@ const addTodo = async () => {
 		})
 	}).then(res => res.json());
 
-	console.log(data);
+	 setTodos([...todos,data]);
+	 setPopupActive(false);
+	 setNewTodo("");
 }
   return (
     <div className="App">
